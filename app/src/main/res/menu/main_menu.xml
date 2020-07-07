@@ -9,4 +9,8 @@
         android:id="@+id/filtroConAlcohol"
         android:title="Con alcohol" />
 
+    <item
+        android:id="@+id/favoritos_lista"
+        android:title="@string/tittle_fav" />
+
 </menu>

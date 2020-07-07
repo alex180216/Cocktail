@@ -41,7 +41,6 @@ class MainAdapter(private val context: Context, private val tragosList: List<Dri
         override fun bind(item: Drink, position: Int) {
             Glide.with(context).load(item.imagen).centerCrop().into(itemView.img_trago)
             itemView.txt_titulo.text = item.nombre
-            //itemView.txt_descripcion.text = item.descripcion
             itemView.setOnClickListener { itemClickLister.onTragoClick(item) }
         }
     }

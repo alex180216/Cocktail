@@ -11,6 +11,7 @@
     <string name="tittle_fav">Favoritas</string>
     <string name="tittle_alcohol">Alcoholicas</string>
     <string name="tittle_noalcohol">Sin Alcohol</string>
+    <string name="shared_preferences">Mis preferencias</string>
 
 
     <string name="hello_world">Hello Square World!</string>

@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import com.ale.tragosapp.R
 import com.ale.tragosapp.data.model.Drink
 import com.squareup.picasso.Picasso
@@ -48,7 +48,14 @@ class TragosDetalleFragment : Fragment() {
         }else{
             instrucciones.setText("No hay instrucciones para esta bebida")
         }
+
+        btn_favorito.setOnClickListener {
+            Toast.makeText(view.context, "Guardado en favoritos", Toast.LENGTH_SHORT).show()
+        }
+
+
     }
+
 
 
 }

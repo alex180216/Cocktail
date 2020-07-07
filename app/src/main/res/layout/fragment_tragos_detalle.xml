@@ -11,6 +11,7 @@
         android:id="@+id/img_detalle"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:contentDescription="@string/title"
         android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,23 +21,36 @@
         android:id="@+id/nombre_bebida_detalle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="Nombre Bebida"
         android:textSize="25sp"
+        android:contentDescription="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_detalle" />
+
+    <ImageButton
+        android:id="@+id/btn_favorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="7dp"
+        android:clickable="false"
+        android:contentDescription="@string/tittle_fav"
+        android:src="@drawable/ic_favorito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_bebida_detalle" />
 
     <TextView
         android:id="@+id/instrucciones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="20sp"
         android:text="instrucciones del trago"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre_bebida_detalle" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_favorito" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

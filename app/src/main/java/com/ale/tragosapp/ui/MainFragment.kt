@@ -109,6 +109,11 @@ class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
                 viewModel.setAlcoholicOrNotFilter("Alcoholic")
                 false
             }
+
+            R.id.favoritos_lista ->{
+                viewModel.setFavorito()
+                false
+            }
             else -> {
                 false
             }

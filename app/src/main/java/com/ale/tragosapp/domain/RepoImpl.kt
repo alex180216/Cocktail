@@ -13,4 +13,8 @@ class RepoImpl(private val dataSource: DataSource): Repo {
     override suspend fun getAlcoholicDrinks(alcoholic: String?): Resource<List<Drink>> {
         return dataSource.getAlcoholicDrinks(alcoholic)
     }
+
+    override suspend fun getFavDrinks() {
+        TODO("Not yet implemented")
+    }
 }
