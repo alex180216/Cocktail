@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.ale.tragosapp.R
 import com.ale.tragosapp.data.model.Drink
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_tragos_detalle.*
 
 class TragosDetalleFragment : Fragment() {
@@ -20,10 +21,13 @@ class TragosDetalleFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         requireArguments().let {
-            drink = it.getParcelable("drink")!!
-            Log.i("RECIBIENDO", drink.nombre)
-            nombre_bebida_detalle?.text = drink.nombre
+            drink = it.getParcelable<Drink>("drink")!!
+            Log.i("RECIBIENDO", drink.descripcion)
+            //nombre_bebida_detalle?.setText(drink.nombre)
+
+
 
         }
     }
@@ -33,6 +37,17 @@ class TragosDetalleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_tragos_detalle, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        nombre_bebida_detalle.setText(drink.nombre)
+        Picasso.with(context).load(drink.imagen).into(img_detalle);
+        if(drink.descripcion != ""){
+            instrucciones.setText(drink.descripcion)
+        }else{
+            instrucciones.setText("No hay instrucciones para esta bebida")
+        }
     }
 
 
