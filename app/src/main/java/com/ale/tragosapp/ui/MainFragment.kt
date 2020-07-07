@@ -16,7 +16,7 @@ import com.ale.tragosapp.data.model.Drink
 import com.ale.tragosapp.domain.RepoImpl
 import com.ale.tragosapp.ui.viewmodel.MainViewModel
 import com.ale.tragosapp.ui.viewmodel.VMFactory
-import com.ale.tragosapp.vo.Resource
+import com.ale.tragosapp.utils.Resource
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
@@ -118,6 +118,7 @@ class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
     override fun onTragoClick(drink: Drink) {
         val bundle = Bundle()
         bundle.putParcelable("drink",drink)
+        Log.i("MIBEBIDA", drink.nombre)
         findNavController().navigate(R.id.tragosDetalleFragment,bundle)
     }
 

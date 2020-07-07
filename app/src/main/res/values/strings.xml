@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">TragosApp</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <!--Toolbar-->
+    <string name="title">Bebidas</string>
+    <!--Iconos-->
+    <string name="title_icon_search">Buscar</string>
+    <string name="title_search">Buscar</string>
+    <string name="tittle_all_drinks">Bebidas</string>
+    <string name="tittle_search_by">Busqueda</string>
+    <string name="tittle_fav">Favoritas</string>
+    <string name="tittle_alcohol">Alcoholicas</string>
+    <string name="tittle_noalcohol">Sin Alcohol</string>
+
+
+    <string name="hello_world">Hello Square World!</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!--Atribuciones-->
+    <!--Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>-->
+
 </resources>

@@ -1,8 +1,8 @@
 package com.ale.tragosapp.data
 
 import com.ale.tragosapp.data.model.Drink
-import com.ale.tragosapp.vo.Resource
-import com.ale.tragosapp.vo.RetrofitClient
+import com.ale.tragosapp.utils.Resource
+import com.ale.tragosapp.utils.RetrofitClient
 
 class DataSource{
 

@@ -2,7 +2,7 @@ package com.ale.tragosapp.domain
 
 import com.ale.tragosapp.data.DataSource
 import com.ale.tragosapp.data.model.Drink
-import com.ale.tragosapp.vo.Resource
+import com.ale.tragosapp.utils.Resource
 
 class RepoImpl(private val dataSource: DataSource): Repo {
 

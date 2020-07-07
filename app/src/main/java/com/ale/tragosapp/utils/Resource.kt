@@ -1,4 +1,4 @@
-package com.ale.tragosapp.vo
+package com.ale.tragosapp.utils
 
 sealed class Resource<out T> {
     class Loading<out T> : Resource<T>()

@@ -1,4 +1,4 @@
-package com.ale.tragosapp.vo
+package com.ale.tragosapp.utils
 
 import com.ale.tragosapp.domain.WebService
 import com.google.gson.GsonBuilder

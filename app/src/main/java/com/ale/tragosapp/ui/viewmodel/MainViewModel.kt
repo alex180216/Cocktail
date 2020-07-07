@@ -2,7 +2,7 @@ package com.ale.tragosapp.ui.viewmodel
 
 import androidx.lifecycle.*
 import com.ale.tragosapp.domain.Repo
-import com.ale.tragosapp.vo.Resource
+import com.ale.tragosapp.utils.Resource
 import kotlinx.coroutines.Dispatchers
 
 class MainViewModel(private val repo:Repo):ViewModel(){
@@ -18,9 +18,7 @@ class MainViewModel(private val repo:Repo):ViewModel(){
         alcoholicOrnotData.value = alcoholicOrNot
     }
 
-    init {
-        setTrago("mojito")
-    }
+
 
     val fetchTragosList = tragoNameData.distinctUntilChanged().switchMap { tragoName ->
         liveData(Dispatchers.IO) {
@@ -42,5 +40,8 @@ class MainViewModel(private val repo:Repo):ViewModel(){
                 emit(Resource.Failure(e))
             }
         }
+    }
+    init {
+        setTrago("chocolate")//para que me agarre al iniciar y no llamar inmediatamente a retrofit
     }
 }
