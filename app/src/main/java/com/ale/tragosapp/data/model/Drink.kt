@@ -7,23 +7,16 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Drink(
-    @SerializedName("strDrinkThumb")
-    val imagen: String = "",
-    @SerializedName("strDrink")
-    val nombre: String = "",
-    @SerializedName("strInstructions")
-    val descripcion: String = "",
     @SerializedName("idDrink")
     val idBebida: String = "",
-    @SerializedName("strIngredient1")
-    val ingrediente1: String = "",
-    @SerializedName("strIngredient2")
-    val ingrediente2: String = "",
-    @SerializedName("strIngredient3")
-    val ingrediente3: String = "",
-    @SerializedName("strIngredient4")
-    val ingrediente4: String = ""
-):Parcelable
+    @SerializedName("strDrink")
+    val nombre: String = "",
+    @SerializedName("strDrinkThumb")
+    val imagen: String = "",
+    @SerializedName("strInstructions")
+    val descripcion: String = ""
+
+    ):Parcelable
 
 data class DrinkList(
     @SerializedName("drinks")

@@ -1,4 +1,4 @@
-package com.ale.tragosapp.ui
+package com.ale.tragosapp.ui.view
 
 import android.os.Bundle
 import android.util.Log
@@ -14,12 +14,14 @@ import com.ale.tragosapp.R
 import com.ale.tragosapp.data.DataSource
 import com.ale.tragosapp.data.model.Drink
 import com.ale.tragosapp.domain.RepoImpl
+import com.ale.tragosapp.ui.MainAdapter
 import com.ale.tragosapp.ui.viewmodel.MainViewModel
 import com.ale.tragosapp.ui.viewmodel.VMFactory
 import com.ale.tragosapp.utils.Resource
 import kotlinx.android.synthetic.main.fragment_main.*
 
-class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
+class MainFragment : Fragment(),
+    MainAdapter.OnTragoClickListener {
 
     private val viewModel by viewModels<MainViewModel> { VMFactory(RepoImpl(DataSource())) }
 
@@ -50,7 +52,11 @@ class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
                 }
                 is Resource.Success -> {
                     progressBar.visibility = View.GONE
-                    rv_tragos.adapter = MainAdapter(requireContext(),result.data,this)
+                    rv_tragos.adapter = MainAdapter(
+                        requireContext(),
+                        result.data,
+                        this
+                    )
                     Log.i("MYTAG", result.data.toString())
                 }
                 is Resource.Failure -> {
@@ -68,7 +74,11 @@ class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
                 }
                 is Resource.Success -> {
                     progressBar.visibility = View.GONE
-                    rv_tragos.adapter = MainAdapter(requireContext(),result.data,this)
+                    rv_tragos.adapter = MainAdapter(
+                        requireContext(),
+                        result.data,
+                        this
+                    )
 
                 }
                 is Resource.Failure -> {
@@ -111,7 +121,8 @@ class MainFragment : Fragment(),MainAdapter.OnTragoClickListener {
             }
 
             R.id.favoritos_lista ->{
-                viewModel.setFavorito()
+                val bundle = Bundle()
+                findNavController().navigate(R.id.fragment_favoritos,bundle)
                 false
             }
             else -> {
