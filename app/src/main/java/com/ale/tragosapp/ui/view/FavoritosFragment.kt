@@ -52,7 +52,7 @@ class FavoritosFragment : Fragment(),
         val bundle = Bundle()
         bundle.putParcelable("drink",drink)
         Log.i("MIBEBIDA", drink.nombre)
-        findNavController().navigate(R.id.tragosDetalleFragment,bundle)
+        findNavController().navigate(R.id.favoritosDetalleFragment,bundle)
     }
 
 

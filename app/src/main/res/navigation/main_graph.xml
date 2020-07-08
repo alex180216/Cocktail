@@ -26,5 +26,14 @@
         android:id="@+id/fragment_favoritos"
         android:name="com.ale.tragosapp.ui.view.FavoritosFragment"
         android:label="Favoritos"
-        tools:layout="@layout/fragment_favoritos" />
+        tools:layout="@layout/fragment_favoritos" >
+        <action
+            android:id="@+id/action_fragment_favoritos_to_favoritosDetalleFragment"
+            app:destination="@id/favoritosDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritosDetalleFragment"
+        android:name="com.ale.tragosapp.ui.view.FavoritosDetalleFragment"
+        android:label="FavoritosDetalleFragment"
+        tools:layout="@layout/fragment_favoritos_detalle"/>
 </navigation>
